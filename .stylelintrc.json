@@ -1,0 +1,18 @@
+{
+  "extends": "stylelint-config-recommended",
+  "ignoreFiles": [
+    "source/styles/common/**/*.scss",
+    "source/styles/vendor/**/*.scss"
+  ],
+  "rules": {
+    "declaration-no-important": true,
+    "indentation": [
+      2,
+      {
+        "ignore": [
+          "inside-parens"
+        ]
+      }
+    ]
+  }
+}
