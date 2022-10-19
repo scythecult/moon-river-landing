@@ -25,24 +25,26 @@
             <ul class="nav__list">
               <li>
                 <button
-                  class="nav__list-button"
+                  class="nav__list-button nav__list-button--fav"
                   type="button"
                   aria-label="Кнопка добавить в избранное"
                 ></button>
               </li>
               <li>
                 <button
-                  class="nav__list-button"
+                  class="nav__list-button nav__list-button--profile"
                   type="button"
                   aria-label="Кнопка войти в профиль пользователя"
                 ></button>
               </li>
               <li>
                 <button
-                  class="nav__list-button"
+                  class="nav__list-button nav__list-button--cart"
                   type="button"
                   aria-label="Кнопка открыть корзину"
-                ></button>
+                >
+                  <span class="nav__list-button-count">1</span>
+                </button>
               </li>
             </ul>
             <button
@@ -52,7 +54,25 @@
             ></button>
           </nav>
         </header>
-        <div class="hero"></div>
+        <div class="hero">
+          <img
+            class="hero__product-logo"
+            src="./images/hero/logo.png"
+            alt="Логотип производителя"
+          />
+          <a
+            class="hero__product-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Смотреть коллекцию</a
+          >
+          <img
+            class="hero__product-image"
+            src="./images/hero/product.png"
+            alt="Продукт производителя кольцо из белого золота с куче бриллинтов"
+          />
+        </div>
         <div class="info"></div>
       </div>
     </div>
