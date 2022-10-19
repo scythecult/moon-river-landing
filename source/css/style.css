@@ -42,7 +42,9 @@ body {
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 60px;
   padding-right: 16px;
+  padding-bottom: 60px;
   padding-left: 16px;
 }
 
@@ -53,8 +55,6 @@ body {
   grid-template-columns: repeat(2, 260px);
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 /* logo */
@@ -190,4 +190,71 @@ body {
   grid-column: 2 / 2;
   grid-row: 1 / 4;
   width: 322px;
+}
+
+/* info */
+
+.info {
+  display: grid;
+  grid-template-columns: minmax(51px, max-content) max-content;
+  justify-content: space-between;
+}
+
+/* lang */
+
+.lang-switcher {
+  align-self: end;
+}
+
+.lang-switcher__button {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: currentColor;
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.lang-switcher__button:hover {
+  opacity: 1;
+}
+
+.lang-switcher__button--active {
+  opacity: 1;
+}
+
+/* product-info */
+
+.product-info {
+  display: grid;
+  row-gap: 8px;
+  line-height: 1.24;
+  color: #ffffff;
+  justify-items: end;
+}
+
+.product-info__title {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-info__desc {
+  font-size: 18px;
+  font-weight: 300;
+  color: #c2c2c2;
+}
+
+.product-info__price {
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  color: #efc58b;
 }
