@@ -33,7 +33,7 @@ body {
 /* main bg */
 
 .main-bg {
-  background-color: #272727;
+  background-image: linear-gradient(0deg, #ffffff 85%, #272727 85%);
 }
 
 /* wrapper */
@@ -148,23 +148,20 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: 475px 322px;
-  grid-auto-flow: row;
-  justify-content: space-between;
+  grid-template-columns: max-content;
+  justify-content: center;
+  row-gap: 14px;
   max-width: 891px;
 }
 
 .hero__product-logo {
-  width: 433px;
-  margin-bottom: 50px;
+  width: 296px;
 }
 
 .hero__product-link {
   display: flex;
   align-items: center;
-  grid-column: 1 / 1;
-  justify-self: end;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   text-decoration: none;
   color: currentColor;
@@ -185,9 +182,7 @@ body {
 }
 
 .hero__product-image {
-  grid-column: 2 / 2;
-  grid-row: 1 / 4;
-  width: 322px;
+  display: none;
 }
 
 /* info */
@@ -229,35 +224,16 @@ body {
 /* product-info */
 
 .product-info {
-  display: grid;
-  row-gap: 8px;
-  line-height: 1.24;
-  color: #ffffff;
-  justify-items: end;
-}
-
-.product-info__title {
-  font-size: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.product-info__desc {
-  font-size: 18px;
-  font-weight: 300;
-  color: #c2c2c2;
-}
-
-.product-info__price {
-  font-size: 18px;
-  font-weight: 300;
-  font-style: italic;
-  letter-spacing: 0.05em;
-  color: #efc58b;
+  display: none;
 }
 
 @media (min-device-width: 425px) {
+  /* main bg */
+
+  .main-bg {
+    background-image: linear-gradient(0deg, #ffffff 80%, #272727 80%);
+  }
+
   /* wrapper */
 
   .wrapper {
@@ -320,5 +296,62 @@ body {
   .logo {
     max-width: 258px;
     min-height: 53px;
+  }
+
+  /* hero */
+
+  .hero {
+    grid-template-columns: 475px 322px;
+    justify-content: space-between;
+    row-gap: 0;
+  }
+
+  .hero__product-logo {
+    width: 433px;
+    margin-bottom: 50px;
+  }
+
+  .hero__product-link {
+    grid-column: 1 / 1;
+    justify-self: end;
+    font-size: 18px;
+  }
+
+  .hero__product-image {
+    display: block;
+    grid-column: 2 / 2;
+    grid-row: 1 / 4;
+    width: 322px;
+  }
+
+  /* product-info */
+
+  .product-info {
+    display: grid;
+    row-gap: 8px;
+    line-height: 1.24;
+    color: #ffffff;
+    justify-items: end;
+  }
+
+  .product-info__title {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .product-info__desc {
+    font-size: 18px;
+    font-weight: 300;
+    color: #c2c2c2;
+  }
+
+  .product-info__price {
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    color: #efc58b;
   }
 }
