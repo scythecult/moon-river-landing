@@ -15,12 +15,19 @@
     <div class="main-bg">
       <div class="wrapper">
         <header class="header">
-          <a class="header__logo logo"
-            ><img
-              class="header__logo-image logo__image"
-              src="./images/header/logo@2x.png"
-              alt="Логотип Moon River"
-          /></a>
+          <a class="header__logo logo">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/header/logo@2x.png"
+              />
+              <img
+                class="header__logo-image logo__image"
+                src="./images/header/logo-m@2x.png"
+                alt="Логотип Moon River"
+              />
+            </picture>
+          </a>
           <nav class="header__nav nav">
             <ul class="nav__list">
               <li>
@@ -73,7 +80,22 @@
             alt="Продукт производителя кольцо из белого золота с куче бриллинтов"
           />
         </div>
-        <div class="info"></div>
+        <div class="info">
+          <div class="lang-switcher">
+            <button
+              class="lang-switcher__button lang-switcher__button--active"
+              type="button"
+            >
+              ru
+            </button>
+            <button class="lang-switcher__button" type="button">en</button>
+          </div>
+          <div class="product-info">
+            <h3 class="product-info__title">КОЛЬЦО TRINITY, Cartier</h3>
+            <p class="product-info__desc">Белое золото, бриллианты</p>
+            <p class="product-info__price">498 000 ₽</p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
