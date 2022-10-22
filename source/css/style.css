@@ -30,6 +30,12 @@ body {
   font-family: "FuturaPT", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+/* main-bg */
+
+.main-bg {
+  position: relative;
+}
+
 /* wrapper */
 
 .wrapper {
