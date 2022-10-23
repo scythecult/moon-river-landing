@@ -506,4 +506,73 @@ body {
     font-style: italic;
     color: #efc58b;
   }
+
+  /* extended-menu footer */
+
+  .extended-menu__footer {
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* banner */
+
+  .banner {
+    display: grid;
+    align-content: start;
+    row-gap: 54px;
+    min-width: 749px;
+    min-height: 268px;
+    padding: 30px;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    background-image: url("../images/extended-menu/banner@2x.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+  }
+
+  .banner__title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .banner__product-name {
+    justify-self: center;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+  }
+
+  .banner__link {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    font-size: 18px;
+    font-weight: 400;
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .banner__link::after {
+    content: "";
+    width: 31px;
+    height: 17px;
+    margin-left: 10px;
+    background-image: url("../images/extended-menu/arrow@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition-property: transform;
+    transition-duration: 0.2s;
+  }
+
+  .banner__link:hover::after {
+    transform: translateX(2px);
+  }
 }
