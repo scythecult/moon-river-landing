@@ -575,4 +575,58 @@ body {
   .banner__link:hover::after {
     transform: translateX(2px);
   }
+
+  /* contacts */
+
+  .contacts {
+    display: grid;
+  }
+
+  .contacts__title {
+    font-size: 14px;
+    font-weight: 400x;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* phone */
+
+  .phone {
+    display: grid;
+    row-gap: 18px;
+  }
+
+  .phone__link {
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #c2c2c2;
+  }
+
+  /* socials */
+
+  .socials {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    column-gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .socials > li {
+    min-width: 35px;
+    min-height: 35px;
+  }
+
+  .socials__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/extended-menu/fb@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
