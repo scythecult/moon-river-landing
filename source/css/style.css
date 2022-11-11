@@ -552,8 +552,9 @@ body {
 
   .extended-menu__footer {
     display: grid;
-    grid-template-columns: 1fr 280px;
-    grid-template-rows: repeat(auto-fit, minmax(50px, 160px));
+    grid-template-areas:
+      "banner banner contacts"
+      "banner banner news";
     column-gap: 85px;
     row-gap: 48px;
     justify-content: space-between;
@@ -562,6 +563,7 @@ body {
   /* banner */
 
   .banner {
+    grid-area: banner;
     display: grid;
     align-content: start;
     row-gap: 54px;
@@ -619,6 +621,7 @@ body {
   /* contacts */
 
   .contacts {
+    grid-area: contacts;
     display: grid;
     row-gap: 14px;
   }
@@ -681,15 +684,17 @@ body {
   /* news */
 
   .news {
-    grid-column: 2;
-    grid-row: span 2;
+    grid-area: news;
     display: grid;
     row-gap: 14px;
   }
 
+  .news__title {
+    margin-bottom: 14px;
+  }
+
   .news__form {
     display: grid;
-    row-gap: 14px;
   }
 
   .news__form__search-wrap {
@@ -697,9 +702,70 @@ body {
   }
 
   .news__form-input {
-    padding: 0;
-    color: #ffffff;
+    width: 100%;
+    max-width: 305px;
+    min-height: 34px;
+    padding: 10px 6px;
+    padding-right: 30px;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #c2c2c2;
     background-color: transparent;
     border: none;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .news__form-submit {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    max-width: 28px;
+    min-height: 15px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url("../images/extended-menu/arrow@2x.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  /* apps */
+
+  .apps {
+    display: grid;
+    grid-template-columns: 90px 90px;
+    justify-items: center;
+    column-gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .apps > li {
+    width: 100%;
+    max-width: 90px;
+    min-height: 30px;
+  }
+
+  .apps__link {
+    display: block;
+    width: 100%;
+    max-width: 90px;
+    min-height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .apps__link--store {
+    background-image: url("../images/extended-menu/appstore@2x.png");
+  }
+
+  .apps__link--google {
+    background-image: url("../images/extended-menu/goggle@2x.png");
   }
 }
