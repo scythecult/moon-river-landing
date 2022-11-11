@@ -427,9 +427,14 @@ body {
     z-index: 4;
     top: 0;
     left: 0;
-    display: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(auto-fit, minmax(75px, max-content)); */
+    row-gap: 70px;
+    justify-items: center;
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     color: #ffffff;
     background-color: #272727;
   }
@@ -446,7 +451,7 @@ body {
 
   .nav-list {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(40px, max-content));
     align-items: center;
     justify-content: space-between;
     max-width: 1080px;
@@ -480,15 +485,23 @@ body {
     background-color: currentColor;
   }
 
+  /* extended-menu__wrap */
+
+  .extended-menu__wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(auto-fit, minmax(350px, 1fr)); */
+    row-gap: 83px;
+    max-width: 1080px;
+  }
+
   /* extended-menu__content */
 
   .extended-menu__content {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
     justify-content: start;
-    max-width: 1080px;
-    margin-right: auto;
-    margin-left: auto;
+    row-gap: 40px;
     padding-bottom: 70px;
     border-bottom: 2px solid #2f2f2f;
   }
@@ -539,12 +552,11 @@ body {
 
   .extended-menu__footer {
     display: grid;
-    grid-auto-flow: column;
-    align-content: center;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 160px));
+    column-gap: 85px;
+    row-gap: 48px;
     justify-content: space-between;
-    max-width: 1080px;
-    margin-right: auto;
-    margin-left: auto;
   }
 
   /* banner */
@@ -608,11 +620,12 @@ body {
 
   .contacts {
     display: grid;
+    row-gap: 14px;
   }
 
   .contacts__title {
     font-size: 14px;
-    font-weight: 400x;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
@@ -621,7 +634,7 @@ body {
 
   .phone {
     display: grid;
-    row-gap: 18px;
+    row-gap: 14px;
   }
 
   .phone__link {
@@ -652,9 +665,41 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url("../images/extended-menu/fb@2x.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  .socials__link--fb {
+    background-image: url("../images/extended-menu/fb@2x.png");
+  }
+
+  .socials__link--insta {
+    background-image: url("../images/extended-menu/insta@2x.png");
+  }
+
+  /* news */
+
+  .news {
+    grid-column: 2;
+    grid-row: span 2;
+    display: grid;
+    row-gap: 14px;
+  }
+
+  .news__form {
+    display: grid;
+    row-gap: 14px;
+  }
+
+  .news__form__search-wrap {
+    position: relative;
+  }
+
+  .news__form-input {
+    padding: 0;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
   }
 }
